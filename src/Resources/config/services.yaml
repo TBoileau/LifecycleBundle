@@ -1,0 +1,9 @@
+services:
+    TBoileau\LifecycleBundle\Maker\LifecycleMaker:
+        arguments: ["@maker.file_manager"]
+        tags:
+            - { name: maker.command }
+    TBoileau\LifecycleBundle\Configurator:
+        autowire: true
+    TBoileau\LifecycleBundle\Dispatcher:
+        autowire: true
