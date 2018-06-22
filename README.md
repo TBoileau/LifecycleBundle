@@ -1,5 +1,8 @@
 # TBoileau/LifecycleBundle
 
+[![Build Status](https://travis-ci.org/TBoileau/LifecycleBundle.svg?branch=master)](https://travis-ci.org/TBoileau/LifecycleBundle) 
+[![Maintainability](https://api.codeclimate.com/v1/badges/cd7eb6cb24eafa9295d4/maintainability)](https://codeclimate.com/github/TBoileau/LifecycleBundle/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/cd7eb6cb24eafa9295d4/test_coverage)](https://codeclimate.com/github/TBoileau/LifecycleBundle/test_coverage)
 
 
 ## Installation
