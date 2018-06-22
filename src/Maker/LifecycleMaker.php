@@ -63,7 +63,7 @@ class LifecycleMaker extends AbstractMaker
      */
     public function interact(InputInterface $input, ConsoleStyle $io, Command $command)
     {
-        while($state = $io->ask('Please enter the new of the new state')) {
+        while($state = $io->ask('Please enter a new state')) {
             $this->states[] = "on_".$state;
         }
     }
