@@ -3,6 +3,10 @@
 [![Build Status](https://travis-ci.org/TBoileau/LifecycleBundle.svg?branch=master)](https://travis-ci.org/TBoileau/LifecycleBundle) 
 [![Maintainability](https://api.codeclimate.com/v1/badges/cd7eb6cb24eafa9295d4/maintainability)](https://codeclimate.com/github/TBoileau/LifecycleBundle/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/cd7eb6cb24eafa9295d4/test_coverage)](https://codeclimate.com/github/TBoileau/LifecycleBundle/test_coverage)
+[![Latest Stable Version](https://poser.pugx.org/tboileau/lifecycle-bundle/v/stable)](https://packagist.org/packages/tboileau/lifecycle-bundle)
+[![Total Downloads](https://poser.pugx.org/tboileau/lifecycle-bundle/downloads)](https://packagist.org/packages/tboileau/lifecycle-bundle)
+[![License](https://poser.pugx.org/tboileau/lifecycle-bundle/license)](https://packagist.org/packages/tboileau/lifecycle-bundle)
+
 
 As you know, the **"S"** of SOLID principles correspond to **Single responsability**. It means the each class should have only a single responsability. So, you can't have logical code of persisting entity in a controller. It must be in a service dedicated to that.
 
