@@ -19,7 +19,7 @@ class LifecycleEvent extends Event
     private $state;
 
     /**
-     * @var Response
+     * @var mixed|null
      */
     private $response;
 
@@ -56,19 +56,19 @@ class LifecycleEvent extends Event
     }
 
     /**
-     * @return Response
+     * @return mixed|null
      */
-    public function getResponse(): Response
+    public function getResponse()
     {
         return $this->response;
     }
 
     /**
-     * @param Response $response
+     * @param null|mixed $response
      *
      * @return self
      */
-    public function setResponse(Response $response): self
+    public function setResponse($response): self
     {
         $this->response = $response;
 

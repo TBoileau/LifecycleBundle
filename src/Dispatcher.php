@@ -29,9 +29,9 @@ class Dispatcher
     /**
      * @param string $state
      * @param mixed $object
-     * @return Response
+     * @return mixed|null
      */
-    public function setState(string $state, $object): Response
+    public function setState(string $state, $object)
     {
         $event = new LifecycleEvent($state, $object);
         return $this->dispatcher->dispatch(LifecycleEvent::CHANGE_STATE,$event)->getResponse();

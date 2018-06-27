@@ -3,6 +3,7 @@
 namespace App\Lifecycle;
 
 use App\Model\Foo;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use TBoileau\LifecycleBundle\EventSubscriber\LifecycleSubscriber;
 
@@ -47,9 +48,9 @@ class FooLifecycle extends LifecycleSubscriber
 
     /**
      * @param Foo $foo
-     * @return Response
+     * @return RedirectResponse
      */
-    public function onRedirect(Foo $foo): Response
+    public function onRedirect(Foo $foo): RedirectResponse
     {
         return $this->redirectToRoute("show");
     }

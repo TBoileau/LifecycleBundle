@@ -3,6 +3,7 @@
 namespace TBoileau\LifecycleBundle\EventSubscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\RouterInterface;
@@ -93,6 +94,15 @@ abstract class LifecycleSubscriber implements EventSubscriberInterface
     protected function render(string $view, array $data = []): Response
     {
         return new Response($this->twig->render($view, $data));
+    }
+
+    /**
+     * @param $data
+     * @return JsonResponse
+     */
+    protected function json($data): JsonResponse
+    {
+        return new JsonResponse($data);
     }
 
     /**
