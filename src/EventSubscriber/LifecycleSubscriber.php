@@ -133,14 +133,12 @@ abstract class LifecycleSubscriber implements EventSubscriberInterface
 
     /**
      * @param LifecycleEvent $event
-     * @throws LifecycleStateNotFound
      */
     public function onChangeState(LifecycleEvent $event)
     {
-        if(!isset(static::getSubscribedStates()[$event->getState()]) || !method_exists($this, static::getSubscribedStates()[$event->getState()])) {
-            throw new LifecycleStateNotFound('This state was not found !');
+        if(isset(static::getSubscribedStates()[$event->getState()]) && method_exists($this, static::getSubscribedStates()[$event->getState()])) {
+            $event->setResponse($this->{static::getSubscribedStates()[$event->getState()]}($event->getObject()));
         }
-        $event->setResponse($this->{static::getSubscribedStates()[$event->getState()]}($event->getObject()));
     }
 
     /**
